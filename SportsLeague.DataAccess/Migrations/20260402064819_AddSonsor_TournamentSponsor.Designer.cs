@@ -12,8 +12,8 @@ using SportsLeague.DataAccess.Context;
 namespace SportsLeague.DataAccess.Migrations
 {
     [DbContext(typeof(LeagueDbContext))]
-    [Migration("20260402044134_AddSponsor_TournamentSponsor")]
-    partial class AddSponsor_TournamentSponsor
+    [Migration("20260402064819_AddSonsor_TournamentSponsor")]
+    partial class AddSonsor_TournamentSponsor
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -133,7 +133,6 @@ namespace SportsLeague.DataAccess.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WebsiteUrl")
@@ -255,7 +254,6 @@ namespace SportsLeague.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

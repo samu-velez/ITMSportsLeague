@@ -130,7 +130,6 @@ namespace SportsLeague.DataAccess.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("WebsiteUrl")
@@ -252,7 +251,6 @@ namespace SportsLeague.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

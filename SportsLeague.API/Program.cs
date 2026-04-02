@@ -4,6 +4,8 @@ using SportsLeague.DataAccess.Context;
 
 using SportsLeague.DataAccess.Repositories;
 
+using SportsLeague.Domain.Interfaces;
+
 using SportsLeague.Domain.Interfaces.Repositories;
 
 using SportsLeague.Domain.Interfaces.Services;
@@ -36,6 +38,10 @@ builder.Services.AddScoped<IRefereeRepository, RefereeRepository>();
 builder.Services.AddScoped<ITournamentRepository, TournamentRepository>();
 
 builder.Services.AddScoped<ITournamentTeamRepository, TournamentTeamRepository>();
+
+builder.Services.AddScoped<ISponsorRepository, SponsorRepository>();
+
+builder.Services.AddScoped<ITournamentSponsorRepository, TournamentSponsorRepository>();
 
 
 // ── Services ──

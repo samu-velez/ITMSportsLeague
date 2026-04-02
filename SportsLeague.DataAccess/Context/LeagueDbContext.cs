@@ -300,7 +300,7 @@ public class LeagueDbContext : DbContext
                 .IsRequired();
 
             entity.Property(s => s.UpdatedAt)
-                .IsRequired();
+                .IsRequired(false);
 
             entity.HasIndex(s => s.Name)
                 .IsUnique();
@@ -323,7 +323,7 @@ public class LeagueDbContext : DbContext
                 .IsRequired();
 
             entity.Property(ts => ts.UpdatedAt)
-                .IsRequired();
+                .IsRequired(false);
 
             entity.HasOne(ts => ts.Tournament)
                 .WithMany(t => t.TournamentSponsors)

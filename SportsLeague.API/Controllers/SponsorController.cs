@@ -88,7 +88,7 @@ namespace SportsLeague.API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Error al crear sponsor: {ex.Message}");
+                return StatusCode(500, ex.InnerException?.Message ?? ex.Message);
             }
         }
 
