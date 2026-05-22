@@ -39,9 +39,10 @@ public class Match : AuditBase
     // Relación 1:1 con resultado 
     public MatchResult? MatchResult { get; set; }
 
-    // Relación 1:N con goles y tarjetas 
+    // Relación 1:N con goles, tarjetas y alineaciones 
     public ICollection<Goal> Goals { get; set; } = new List<Goal>();
 
     public ICollection<Card> Cards { get; set; } = new List<Card>();
 
+    public ICollection<MatchLineup> MatchLineups { get; set; } = new List<MatchLineup>();
 }
